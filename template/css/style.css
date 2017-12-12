@@ -22,7 +22,7 @@ td.code {
 #content {
   padding-top: 16px;
   z-Index: -1;
-  margin-left: 270px;
+  margin-left: 230px;
 }
 
 p {
@@ -86,7 +86,7 @@ article h3 {
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px 5px;
 }
 
 article h4 {
@@ -177,6 +177,7 @@ pre {
 
 pre.prettyprint {
   width: 100%;
+  margin-top: 0px;
 }
 
 code.language-text {
@@ -567,3 +568,33 @@ p.deprecated span{
   }
 
 } /* /@media print */
+
+/* ------------------------------------------------------------------------------------------
+ * Custom
+ * ------------------------------------------------------------------------------------------ */
+
+#content input[type=radio] {
+  margin-top: 0px;
+  margin-right: 5px;
+}
+
+.container-fluid {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.input-group {
+  margin-bottom: 6px;
+}
+
+.input-group-addon {
+  min-width: 60px;
+}
+
+.btn-div {
+  height: 40px;
+}
+
+button.sample-request-clear {
+  width: 22px;
+}

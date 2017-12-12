@@ -17,7 +17,7 @@
 <nav id="scrollingNav">
   <div class="sidenav-search">
     <input class="form-control search" type="text" placeholder="{{__ "Filter..."}}">
-    <span class="search-reset">x</span>
+    <span class="search-reset">×</span>
   </div>
   <ul class="sidenav nav nav-list list">
   {{#each nav}}
@@ -80,7 +80,7 @@
   {{#if template.withGenerator}}
     {{#if generator}}
       <div class="content">
-        {{__ "Generated with"}} <a href="{{{generator.url}}}">{{{generator.name}}}</a> {{{generator.version}}} - {{{generator.time}}}
+        <a href="http://eternalzzx.com">eternalzzx</a> 0.1.0
       </div>
     {{/if}}
   {{/if}}
@@ -237,8 +237,8 @@
       <h2>{{__ "Send a Sample Request"}}</h2>
       <form class="form-horizontal">
         <fieldset>
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="{{../id}}-sample-request-url"></label>
+            <div>
+              <label class="col-md-2 control-label" for="{{../id}}-sample-request-url"></label>
               <div class="input-group">
                 <input id="{{../id}}-sample-request-url" type="text" class="form-control sample-request-url" value="{{article.sampleRequest.0.url}}" />
                 <span class="input-group-addon">{{__ "url"}}</span>
@@ -252,8 +252,8 @@
             <h4><input type="radio" data-sample-request-header-group-id="sample-request-header-{{@index}}" name="{{../id}}-sample-request-header" value="{{@index}}" class="sample-request-header sample-request-switch" {{#if_eq @index compare=0}} checked{{/if_eq}} />{{@key}}</h4>
             <div class="{{../id}}-sample-request-header-fields{{#if_gt @index compare=0}} hide{{/if_gt}}">
               {{#each this}}
-              <div class="form-group">
-                <label class="col-md-3 control-label" for="sample-request-header-field-{{field}}">{{field}}</label>
+              <div>
+                <label class="col-md-2 control-label" for="sample-request-header-field-{{field}}">{{field}}</label>
                 <div class="input-group">
                   <input type="text" placeholder="{{field}}" id="sample-request-header-field-{{field}}" class="form-control sample-request-header" data-sample-request-header-name="{{field}}" data-sample-request-header-group="sample-request-header-{{@../index}}">
                   <span class="input-group-addon">{{{type}}}</span>
@@ -270,9 +270,9 @@
           <h3>{{__ "Parameters"}}</h3>
           {{#each article.parameter.fields}}
             <h4><input type="radio" data-sample-request-param-group-id="sample-request-param-{{@index}}"  name="{{../id}}-sample-request-param" value="{{@index}}" class="sample-request-param sample-request-switch" {{#if_eq @index compare=0}} checked{{/if_eq}} />{{@key}}</h4>
-            <div class="form-group {{../id}}-sample-request-param-fields{{#if_gt @index compare=0}} hide{{/if_gt}}">
+            <div class="{{../id}}-sample-request-param-fields{{#if_gt @index compare=0}} hide{{/if_gt}}">
               {{#each this}}
-                <label class="col-md-3 control-label" for="sample-request-param-field-{{field}}">{{field}}</label>
+                <label class="col-md-2 control-label" for="sample-request-param-field-{{field}}">{{field}}</label>
                 <div class="input-group">
                   <input id="sample-request-param-field-{{field}}" type="text" placeholder="{{field}}" class="form-control sample-request-param" data-sample-request-param-name="{{field}}" data-sample-request-param-group="sample-request-param-{{@../index}}" {{#if optional}}data-sample-request-param-optional="true"{{/if}}>
                   <div class="input-group-addon">{{{type}}}</div>
@@ -283,15 +283,15 @@
         {{/if}}
       {{/if}}
 
-          <div class="form-group">
+          <div class="btn-div">
             <div class="controls pull-right">
               <button class="btn btn-primary sample-request-send" data-sample-request-type="{{article.type}}">{{__ "Send"}}</button>
             </div>
           </div>
-          <div class="form-group sample-request-response" style="display: none;">
+          <div class="sample-request-response" style="display: none;">
             <h3>
               {{__ "Response"}}
-              <button class="btn btn-default btn-xs pull-right sample-request-clear">X</button>
+              <button class="btn btn-default btn-xs pull-right sample-request-clear">×</button>
             </h3>
             <pre class="prettyprint language-json" data-type="json"><code class="sample-request-response-json"></code></pre>
           </div>
@@ -637,7 +637,7 @@
 </script>
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row-fluid">
     <div id="sidenav" class="span2"></div>
     <div id="content">
       <div id="project"></div>
