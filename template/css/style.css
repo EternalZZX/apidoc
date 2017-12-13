@@ -598,3 +598,8 @@ p.deprecated span{
 button.sample-request-clear {
   width: 22px;
 }
+
+.popover-content>ul,
+.popover-content>ol {
+  padding-left: 20px; 
+}
